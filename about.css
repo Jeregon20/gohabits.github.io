@@ -1,0 +1,33 @@
+#about-us {
+	background-color: #f2f2f2;
+	padding: 50px;
+	text-align: center;
+}
+
+#about-us h2 {
+	color: #4a4a4a;
+	font-size: 36px;
+	transition: color 0.3s ease;
+}
+
+#about-us h2:hover {
+	color: #0099cc;
+}
+
+#about-us p {
+	color: #666;
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 30px;
+}
+
+#about-us img {
+	max-width: 100%;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s ease;
+}
+
+#about-us img:hover {
+	transform: scale(1.1);
+}
