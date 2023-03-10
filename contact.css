@@ -12,7 +12,7 @@ body {
 
 header {
     background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px #B1E4CB;
     padding: 75px;
     position: sticky;
     top: 0;
@@ -48,7 +48,7 @@ nav ul li a {
 .container {
 	background-color: #fff;
 	border-radius: 50px;
-	box-shadow: 0 0 50px rgba(0,0,0,0.3);
+	box-shadow: 0 0 50px #B1E4CB;
 	padding: 70px;
 }
 
@@ -78,7 +78,61 @@ nav ul li a {
 	background-color: #e5e5e5;
 }
 
-button[type="submit"] {
-	background-color: #222;
-	color: #fff
-}
+.animated-button {
+    background-color: #B1E4CB;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .animated-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .animated-button:hover::before {
+    opacity: 0.2;
+  }
+  
+  .animated-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: #000;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+  
+  .animated-button:hover::after {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .animated-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #B1E4CB;
+  }
+  
+  .animated-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
